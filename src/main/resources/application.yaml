@@ -1,0 +1,17 @@
+#configuração do banco postgresql
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres?schema=anime
+    username: postgres
+    password: debian23
+#mostra o SQL
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+#tratamento de erro
+server:
+  error:
+    include-stacktrace: on-param
